@@ -1,8 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .api.customers import router as customers_router
-from .api.insurances import router as insurances_router
-from .api.documents import router as documents_router
+from .api import router as api_router
 
 app = FastAPI(title="Insurance Tracking System")
 
@@ -15,10 +13,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include routers
-app.include_router(customers_router)
-app.include_router(insurances_router)
-app.include_router(documents_router)
+# Include router
+app.include_router(api_router)
 
 @app.get("/")
 def read_root():

@@ -1,90 +1,51 @@
-# Active Development Context
+# Active Context
 
 ## Current Focus
-Backend development phase has been completed, and we are transitioning to frontend development.
+- Insurance management feature implementation
+- Type-safe API integration
+- Frontend component refinement
 
-### Recent Changes
-1. Backend API Implementation
-   - Completed FastAPI setup with CORS configuration
-   - Implemented database models (Customer, Insurance, Document)
-   - Created comprehensive API routes for all entities
-   - Implemented service layer for business logic
-   - Set up SQLite database integration
+## Recent Changes
+- Fixed TypeScript compilation errors in insurance-related components
+- Updated API response handling in `CustomerInsurances` component
+- Refined insurance form validation and data management
+- Aligned frontend types with backend schema
 
-2. API Features
-   - Customer management (CRUD operations)
-   - Insurance policy tracking
-   - Document management system
-   - Upcoming renewals tracking
+## Active Decisions
+1. Insurance Management
+   - Using modular component structure with `CustomerInsurances` and `InsuranceForm`
+   - Implementing type-safe API calls with proper interfaces
+   - Maintaining consistent error handling and loading states
 
-### Active Decisions
-1. Backend Architecture
-   - Using FastAPI for high performance and easy API documentation
-   - SQLAlchemy ORM for database operations
-   - Pydantic models for request/response validation
-   - SQLite for development database
+2. Data Flow
+   - API responses properly typed with `ApiResponse<T>` generic
+   - Clear separation between create and update operations
+   - Consistent state management in forms and lists
 
-2. Frontend Planning
-   - React for frontend framework
-   - Tailwind CSS for styling
-   - Component-based architecture
-   - Responsive design approach
+3. User Interface
+   - Modal-based forms for insurance management
+   - Responsive table layout for insurance display
+   - Consistent loading and error states
 
-### Current Challenges
-1. Frontend Development
-   - Setting up React application structure
-   - Implementing Tailwind CSS configuration
-   - Creating reusable components
-   - Integrating with backend API
+## Current Considerations
+1. Performance
+   - Efficient data fetching for customer insurances
+   - Optimized form state management
+   - Responsive UI updates
 
-### Next Steps
-1. Frontend Setup
-   - Initialize React application
-   - Configure Tailwind CSS
-   - Set up routing system
-   - Create base components
+2. User Experience
+   - Clear feedback for all operations
+   - Intuitive form validation
+   - Smooth transitions between states
 
-2. Feature Implementation
-   - Dashboard layout
-   - Customer management interface
-   - Insurance policy forms
-   - Document upload system
+3. Code Quality
+   - Type safety across components
+   - Consistent error handling
+   - Clean component interfaces
 
-### Active Considerations
-1. UI/UX Design
-   - Modern and clean interface
-   - Intuitive navigation
-   - Responsive design
-   - Accessibility compliance
-
-2. Performance
-   - Efficient API calls
-   - Optimized database queries
-   - Frontend state management
-   - Asset optimization
-
-### Development Guidelines
-1. Code Structure
-   - Follow component-based architecture
-   - Implement proper error handling
-   - Maintain consistent coding style
-   - Write comprehensive documentation
-
-2. Testing Strategy
-   - Unit tests for components
-   - Integration tests for API
-   - End-to-end testing
-   - Performance testing
-
-### Current Sprint Goals
-1. Frontend Development
-   - Complete React setup
-   - Implement basic UI components
-   - Create routing structure
-   - Set up API integration
-
-2. Documentation
-   - API documentation
-   - Component documentation
-   - Setup instructions
-   - User guides 
+## Next Steps
+1. Consider adding batch operations for insurances
+2. Implement advanced filtering and sorting
+3. Add data export capabilities
+4. Consider implementing insurance templates
+5. Add insurance analytics and reporting features 
